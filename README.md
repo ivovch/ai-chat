@@ -4,7 +4,7 @@ Web application for chatting with AI built with Vue.js 3, featuring multiple cha
 
 ## 🚀 Demo
 
-[Live Demo](your-vercel-url-here)
+[Live Demo](https://ai-chat-sigma-umber.vercel.app/)
 
 ## 🛠 Tech Stack
 
