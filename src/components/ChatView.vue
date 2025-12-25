@@ -79,7 +79,7 @@ const sendMassageHandler = async (value: string) => {
   try {
     await store.sendChatMessage(value, currentChatId.value)
   } catch (err) {
-    showError(err)
+    showError(err as string)
   }
 }
 
