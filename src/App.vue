@@ -3,7 +3,16 @@
     <v-navigation-drawer v-model="drawer" :permanent="!mobile" :width="400">
       <div class="side-menu-content">
         <div class="d-flex flex-column ga-3 pa-3 border-b">
-          <v-btn icon="mdi-theme-light-dark" variant="tonal" @click="themeToggle" />
+          <div class="d-flex justify-space-between">
+            <v-btn icon="mdi-theme-light-dark" variant="tonal" @click="themeToggle" />
+            <v-btn
+              v-if="mobile"
+              icon="mdi-close"
+              color="error"
+              variant="text"
+              @click="drawer = false"
+            />
+          </div>
 
           <v-btn block size="large" variant="tonal" @click="createNewChatHandler">
             Create new chat</v-btn

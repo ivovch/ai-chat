@@ -1,5 +1,9 @@
 <template>
-  <div class="chat-stub d-flex flex-column align-center justify-center">
+  <div class="chat-stub d-flex flex-column align-center justify-center position-relative">
+    <div v-if="mobile" class="position-absolute left-0 top-0">
+      <v-btn icon="mdi-menu" variant="text" @click="openDrawerHandler" />
+    </div>
+
     <v-icon size="80" color="primary" class="mb-4">mdi-robot-outline</v-icon>
 
     <h1 class="text-h4 font-weight-medium mb-2">Welcome to AI Chat</h1>
@@ -21,6 +25,15 @@
     </v-card>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useDisplay } from 'vuetify'
+
+const emits = defineEmits(['open'])
+const openDrawerHandler = () => emits('open')
+
+const { mobile } = useDisplay()
+</script>
 
 <style scoped>
 .chat-stub {
